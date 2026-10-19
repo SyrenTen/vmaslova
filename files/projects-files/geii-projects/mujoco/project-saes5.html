@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poste de chargement/déchargement de pièces</title>
+
+    <!-- GLOBAL STYLE -->
+    <link rel="stylesheet" href="../../../../style.css">
+
+    <!-- PROJECT PAGE STYLE -->
+    <link rel="stylesheet" href="project-page.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="head-button">Vitaliia Maslova</div>
+
+    <nav class="navbar">
+        <div class="nav-dropdown">
+            <a href="../../../../index.html#hero">Accueil ▾</a>
+            <div class="dropdown-menu">
+                <a href="../../../../index.html#personnage">Personnage</a>
+                <a href="../../../../index.html#competences-geii">Compétences GEII</a>
+                <a href="../../../../index.html#competences">Compétences</a>
+                <a href="../../../../index.html#liens">Liens</a>
+                <a href="../../../../index.html#projects_presentation">Projets</a>
+                <a href="../../../../index.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <a href="../../../../research.html">Recherche</a>
+        <a href="../../../../projects.html">Projets</a>
+        <a href="../../../../about-me.html">À propos de moi</a>
+        <a href="../../../../competences-geii.html">Competences GEII</a>
+    </nav>
+</header>
+
+<section class="project-page">
+
+    <div class="project-container">
+
+        <div class="project-top">
+            <a href="../../../../projects.html" class="btn-read project-back-btn">← Retour</a>
+        </div>
+
+        <h1 class="project-title">Automatisation d’un poste de chargement/déchargement de pièces</h1>
+
+        <div class="project-image-wrapper">
+            <img src="../../../../images\images-projects\geii\mujoco\connected_boxes.jpg" alt="SAMA project">
+        </div>
+
+        <div class="project-section">
+            <h2>Présentation</h2>
+
+            <p>
+                Ce projet a été réalisé dans le cadre de travaux pratiques en Automatisme & Informatique Industrielle.
+        Il consiste à automatiser un poste de chargement et de déchargement de coques de téléphone portable
+        au sein d’une ligne de production industrielle, à l’aide de deux automates Siemens SIMATIC S7-1500
+        et S7-1200, d’un bras robotisé 3 axes et d’une interface homme-machine (IHM).
+
+            </p>
+
+            <p>
+                Le travail a consisté à développer les programmes de commande de la station et du robot,
+        configurer leur communication industrielle PROFINET, concevoir les séquences automatisées
+        à l’aide de GRAFCET, puis intégrer les fonctions de conduite, de supervision et de sécurité.
+        L’objectif est d’automatiser la manipulation des pièces et la gestion du magasin de stockage
+        afin de limiter les interventions manuelles de l’opérateur.
+
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Mes missions principales</h2>
+
+            <ul>
+                <li>Analyse du cahier des charges et des spécifications fonctionnelles de la station</li>
+                <li>Étude de l’architecture matérielle et du réseau industriel</li>
+                <li>Configuration de la communication PROFINET entre les automates Siemens S7-1500 et S7-1200</li>
+                <li>Développement des GRAFCET de conduite, de production normale et de référencement du robot</li>
+                <li>Programmation des séquences de chargement et de déchargement des pièces</li>
+                <li>Développement de l’algorithme de gestion du magasin à 12 emplacements</li>
+                <li>Conception de l’IHM sous WinCC pour le pilotage, la supervision et l’affichage des états de la station</li>
+                <li>Implémentation des modes automatique, manuel et semi-manuel</li>
+                <li>Intégration des fonctions de sécurité : arrêt d’urgence, gestion des arrêts et réarmement</li>
+                <li>Réalisation des tests unitaires, des tests d’intégration et de la vérification fonctionnelle</li>
+                <li>Rédaction de la documentation technique et des procédures de maintenance</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Description technique</h2>
+
+            <p>
+                Le système repose sur deux automates programmables Siemens :
+        un SIMATIC ET 200SP CPU 1512SP, chargé de piloter la station, le convoyeur et l’IHM,
+        et un SIMATIC S7-1200 CPU 1214C, dédié au contrôle du bras robotisé 3 axes.
+        Les deux automates communiquent via PROFINET à travers une table d’échanges
+        d’entrées/sorties permettant de transmettre les commandes de déplacement et
+        les retours d’état du robot.
+            </p>
+
+          <p>
+            La programmation est réalisée sous TIA Portal V16. Les séquences de fonctionnement
+        sont structurées à l’aide de GRAFCET afin de gérer le référencement des axes,
+        les déplacements du robot, la prise et la dépose des pièces ainsi que les échanges
+        avec le convoyeur. L’IHM, développée sous WinCC sur un pupitre TP700 Comfort,
+        permet à l’opérateur de sélectionner les modes de fonctionnement, de lancer les cycles
+        et de surveiller les états des entrées/sorties et du magasin.
+
+          </p>
+
+            <ul>
+                <li>Commande des axes X, Y et Z du robot manipulateur</li>
+                <li>Référencement des axes X et Z par détection des positions d’origine</li>
+                <li>Pilotage du déplacement pneumatique de l’axe Y et de la pince de préhension</li>
+                <li>Automatisation des cycles de chargement et de déchargement</li>
+                <li>Gestion automatique du stock et des 12 emplacements du magasin</li>
+                <li>Supervision des capteurs, des actionneurs et des états des automates</li>
+                <li>Gestion des alarmes, des conditions initiales et des procédures de réarmement</li>
+                <li>Vérification du fonctionnement global de la station et de la communication inter-automates</li>
+            </ul>
+
+            <p>
+                L’objectif était de concevoir une solution d’automatisation fiable et structurée,
+        capable d’assurer la manipulation autonome des pièces, la gestion du stock et
+        la coordination entre le robot et la station, tout en garantissant la sécurité
+        des personnes et des équipements
+            </p>
+        </div>
+
+        <div class="project-buttons">
+            <a href="B4_DDC_EQ5_V2.pdf" target="_blank" class="btn-read">Dossier de Conception</a>
+            <a href="B4_DDF_EQ5_V2.docx.pdf" target="_blank" class="btn-read">Dossier de Fabrication</a>
+            <a href="B4_DDV_EQ5_V2.pdf" target="_blank" class="btn-read">Dossier de Verification</a>
+          <a href="B4_DDV_EQ5_V2.pdf" target="_blank" class="btn-read">Dossier d'Integration</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p class="copyright">© 2025 Vitaliia Maslova</p>
+</footer>
+
+</body>
+</html>
